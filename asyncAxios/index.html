@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+    <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Customer Name 
+              <span class="iconsSort sortName">
+              <i class="fa fa-sort-up"></i>
+              <i class="fa fa-sort-down"></i>
+            </span>
+          </th>
+            <th>Contact<span class="iconsSort sortContact">
+              <i class="fa fa-sort-up"></i>
+              <i class="fa fa-sort-down"></i>
+            </span>
+          </th>
+            <th>Age 
+              <span class="iconsSort sortAge">
+                <i class="fa fa-sort-up"></i>
+                <i class="fa fa-sort-down"></i>
+              </span>
+            </th>
+            <th>Country 
+              <span class="iconsSort sortCountry">
+                <i class="fa fa-sort-up"></i>
+                <i class="fa fa-sort-down"></i>
+              </span>
+            </i></th>
+            <th>Status 
+              <span class="iconsSort sortStatus">
+                <i class="fa fa-sort-up"></i>
+                <i class="fa fa-sort-down"></i>
+              </span>
+            </th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>71</td>
+                <td>Ada Merino<br><small>vosela@gmail.com</small></td>
+                <td>+1 (936) 315-7811</td>
+                <td>53</td>
+                <td>Venezuela</td>
+                <td><span class="status rejected">Rejected</span></td>
+                <td class="actions">
+                    <i class="fa fa-eye"></i>
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>82</td>
+                <td>Agnes Griffin<br><small>figle@gmail.com</small></td>
+                <td>+1 (435) 899-5670</td>
+                <td>52</td>
+                <td>Libya</td>
+                <td><span class="status verified">Verified</span></td>
+                <td class="actions">
+                    <i class="fa fa-eye"></i>
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>Annie de Vos<br><small>icboz@gmail.com</small></td>
+                <td>+1 (787) 219-8188</td>
+                <td>34</td>
+                <td>U.S. Virgin Islands</td>
+                <td><span class="status pending">Pending</span></td>
+                <td class="actions">
+                    <i class="fa fa-eye"></i>
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash"></i>
+                  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <dialog class="add">
+      <form class="form formAdd" action="#">
+        <div class="form-title">Welcome</div>
+        <i class="fa fa-close closeAdd"></i>
+        <div class="form-subtitle">Let's create your account!</div>
+        <div class="form-input-container ic1">
+          <input name="name" class="form-input add-name" type="text" placeholder=" ">
+          <div class="cut"></div>
+          <label for="name" class="form-placeholder">First name</label>
+        </div>
+        <div class="form-input-container ic2">
+          <input name="add-country" class="form-input edit-country" type="text" placeholder=" ">
+          <div class="cut"></div>
+          <label for="add-country" class="form-placeholder">Country</label>
+        </div>
+        <div class="form-input-container ic2">
+          <input name="add-age" class="form-input edit-age" type="number" placeholder=" ">
+          <div class="cut"></div>
+          <label for="add-age" class="form-placeholder">Age</label>
+        </div>
+
+        <div class="form-input-container ic2">
+          <input name="add-email" class="form-input add-email" type="text" placeholder=" ">
+          <div class="cut cut-short"></div>
+          <label for="add-email" class="form-placeholder">Email</label>
+        </div>
+        <button type="submit" class="submit add-submit">submit</button>
+      </form>
+    </dialog>
+
+    <dialog class="Edit">
+      <form class="form formEdit" action="#">
+        <div class="form-title">Edit</div>
+        <i class="fa fa-close close"></i>
+        <div class="form-subtitle">Let's edit your account!</div>
+        <div class="form-input-container ic1">
+          <input name="edit-name" class="form-input edit-name" type="text" placeholder=" ">
+          <div class="cut"></div>
+          <label for="firstname" class="form-placeholder">First name</label>
+        </div>
+        
+        <div class="form-input-container ic2">
+          <input name="edit-country" class="form-input edit-country" type="text" placeholder=" ">
+          <div class="cut"></div>
+          <label for="country" class="form-placeholder">Country</label>
+        </div>
+        <div class="form-input-container ic2">
+          <input name="edit-age" class="form-input edit-age" type="number" placeholder=" ">
+          <div class="cut"></div>
+          <label for="age" class="form-placeholder">Age</label>
+        </div>
+        <div class="form-input-container ic2">
+          <input name="edit-email" class="form-input edit-email" type="text" placeholder=" ">
+          <div class="cut cut-short"></div>
+          <label for="email" class="form-placeholder">Email</label>
+        </div>
+        <button type="submit" class="submit edit-submit">submit</button>
+      </form>
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/dom.js"></script>
+</body>
+</html>
